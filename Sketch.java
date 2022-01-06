@@ -2,35 +2,48 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
+
+
   public void settings() {
 	// put your size call here
-    size(400, 400);
+    size(900, 900);
+
+  }
+    public void setup() {
+    background(32);
+
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
-  public void setup() {
-    background(210, 255, 173);
-  }
+public void draw() {
+   if (mousePressed) {
+    fill(204, 161, 112);
+    ellipse(mouseX, mouseY, 45, 45);
+    fill (74, 65, 55);
+    ellipse(mouseX,mouseY,4,4);
+    ellipse(mouseX + 5 ,mouseY - 5,4,4);
+    ellipse(mouseX + 8 ,mouseY + 8,4,4);
+    ellipse(mouseX - 7 ,mouseY + 3,4,4);
+    ellipse(mouseX + 12,mouseY - 9,4,4);
+    ellipse(mouseX - 6,mouseY + 15,4,4);
+    ellipse(mouseX - 7,mouseY -14 ,4,4);
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
-  public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
-
-    stroke(255);
-    line(50, 125, 70, 50);  
+   }
+   if (keyPressed){
+    if (key == 'b'){
+        fill (74, 65, 55);
+  rect(mouseX, mouseY, 60, 30);
+    }
+    else if (keyPressed) {
+         if (key == 't'){
+          fill(255, 157, 28);
+          ellipse(mouseX , mouseY, 30,30);
+          fill(0,255,0);
+          rect(mouseX-2,mouseY-15,20,10);
+        }
+    }
   }
-  
-  // define other methods down here.
+}
+
+
+
 }
